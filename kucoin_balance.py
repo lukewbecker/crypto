@@ -16,18 +16,18 @@ def kukoin_run():
     import hashlib
 
     # Now importing the env file so the script can access the KuCoin API keys:
-    import env
+    import keys
 
     # Defining the api keys with their own variables:
-    api_key = env.kc_api_key
-    api_s = env.kc_secret_api
-    api_pp = env.kc_passphrase
-    api_uid = env.kc_uid
+    api_key = keys.kc_api_key
+    api_s = keys.kc_secret_api
+    api_pp = keys.kc_passphrase
+    api_uid = keys.kc_uid
 
     # creating the api keys for use in the calls:
-    api_key = env.kc_api_key
-    api_secret = env.kc_secret_api
-    api_passphrase = env.kc_passphrase
+    api_key = keys.kc_api_key
+    api_secret = keys.kc_secret_api
+    api_passphrase = keys.kc_passphrase
     url = 'https://api.kucoin.com/api/v1/accounts'
     now = int(time.time() * 1000)
     str_to_sign = str(now) + 'GET' + '/api/v1/accounts'
